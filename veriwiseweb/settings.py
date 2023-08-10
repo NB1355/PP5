@@ -30,7 +30,7 @@ DEBUG = os.environ.get("DEBUG", False)
 
 ALLOWED_HOSTS = [
     "8000-nb1355-pp5-gsqp1kkdfib.ws-eu102.gitpod.io",
-    "nb5513pp5-b88e980a804f.herokuapp.com",
+    "nb1355pp5-46b10084ef07.herokuapp.com",
     "localhost",
 ]
 
