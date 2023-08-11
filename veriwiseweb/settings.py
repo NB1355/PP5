@@ -29,7 +29,7 @@ SECRET_KEY = os.environ.get("SECRET_KEY", "")
 DEBUG = os.environ.get("DEBUG", False)
 
 ALLOWED_HOSTS = [
-    "8000-nb1355-pp5-gsqp1kkdfib.ws-eu102.gitpod.io",
+    "8000-nb1355-pp5-gsqp1kkdfib.ws-eu103.gitpod.io",
     "nb1355pp5-46b10084ef07.herokuapp.com",
     "localhost",
 ]
