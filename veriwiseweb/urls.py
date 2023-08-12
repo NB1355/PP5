@@ -19,7 +19,8 @@ from pages.views import test_landing
 
 urlpatterns = [
     path("admin/", admin.site.urls),
-    path("test/", test_landing),
-    path("", include("pages.urls")),
+    # path("test/", test_landing),
+    # path("", include("pages.urls")),
     path("accounts/", include("allauth.urls")),
+    path("", include("home.urls")),
 ]
