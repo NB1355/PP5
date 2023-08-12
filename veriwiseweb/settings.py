@@ -147,7 +147,7 @@ if 'USE_AWS' in os.environ:
     }
 
     # Bucket Config
-    AWS_STORAGE_BUCKET_NAME = "nb5513pp5"
+    AWS_STORAGE_BUCKET_NAME = "pl5v3"
     AWS_S3_REGION_NAME = "eu-north-1"
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
     AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
