@@ -18,7 +18,7 @@ from django.urls import path, include
 from pages.views import test_landing
 
 urlpatterns = [
-    path('admin/', admin.site.urls),
-    path('test/', test_landing, name = ''),
-    path('', include('pages.urls')),
+    path("admin/", admin.site.urls),
+    path("test/", test_landing),
+    path("", include("pages.urls")),
 ]
