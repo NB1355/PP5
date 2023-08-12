@@ -135,21 +135,23 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATIC_ROOT= (os.path.join(BASE_DIR, 'staticfiles'))
-STATICFILES_DIRS = [(os.path.join(BASE_DIR, 'static'))]
+
+
+# STATICFILES_DIRS = [(os.path.join(BASE_DIR, 'static'))]
 #STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 #STATIC_ROOT = BASE_DIR / "staticfiles"
 #STATIC_URL = "static/"
 
-STORAGES = {
-    # Enable WhiteNoise's GZip and Brotli compression of static assets:
-    # https://whitenoise.readthedocs.io/en/latest/django.html#add-compression-and-caching-support
-    "staticfiles": {
-        "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
-    },
-}
+# STORAGES = {
+#     # Enable WhiteNoise's GZip and Brotli compression of static assets:
+#     # https://whitenoise.readthedocs.io/en/latest/django.html#add-compression-and-caching-support
+#     "staticfiles": {
+#         "BACKEND": "whitenoise.storage.CompressedManifestStaticFilesStorage",
+#     },
+# }
 
-WHITENOISE_KEEP_ONLY_HASHED_FILES = True
+# WHITENOISE_KEEP_ONLY_HASHED_FILES = True
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -162,8 +164,8 @@ if 'USE_AWS' in os.environ:
     }
 
     # Bucket Config
-    AWS_STORAGE_BUCKET_NAME = 'ckz8780-boutique-ado'
-    AWS_S3_REGION_NAME = 'us-east-1'
+    AWS_STORAGE_BUCKET_NAME = os.environ.get('AWS_STORAGE_BUCKET_NAME')
+    AWS_S3_REGION_NAME = os.environ.get('AWS_S3_REGION_NAME')
     AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
     AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
     AWS_S3_CUSTOM_DOMAIN = f'{AWS_STORAGE_BUCKET_NAME}.s3.amazonaws.com'
